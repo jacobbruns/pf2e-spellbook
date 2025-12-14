@@ -1,0 +1,1247 @@
+[
+	{
+		"name": "Know the Way",
+		"source": "PC1",
+		"remaster": true,
+		"page": 340,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"detection",
+			"manipulate"
+		],
+		"traditions": [
+			"divine",
+			"occult",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"entries": [
+			"In your mind's eye, you magically reorient yourself. You immediately know which direction is north (if it exists at your current location), and you can choose a location you were at within the last 24 hours and learn what direction it lies."
+		],
+		"heightened": {
+			"X": {
+				"3": [
+					"You can choose a location you were at within the last week."
+				],
+				"7": [
+					"You can choose a location you were at regardless of how long ago you were there."
+				]
+			}
+		},
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Void Warp",
+		"source": "PC1",
+		"remaster": true,
+		"page": 366,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"manipulate",
+			"void"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 living creature",
+		"savingThrow": {
+			"basic": true,
+			"type": [
+				"F"
+			]
+		},
+		"entries": [
+			"You call upon the Void to harm life force. The target takes {@damage 2d4} void damage with a basic Fortitude save. On a critical failure, the target is also enfeebled 1 until the start of your next turn."
+		],
+		"heightened": {
+			"plusX": {
+				"1": [
+					"The damage increases by {@scaledamage 2d4|1-10|1d4}."
+				]
+			}
+		},
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Light",
+		"source": "PC1",
+		"remaster": true,
+		"page": 340,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"light",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 120,
+			"unit": "feet"
+		},
+		"duration": {
+			"entry": "until your next daily preparations",
+			"unit": "special"
+		},
+		"entries": [
+			"You create an orb of light that sheds {@quickref bright light||3|bright light} in a 20-foot radius (and {@quickref dim light||3|dim light} for the next 20 feet) in a color you choose. If you create the light in the same space as a willing creature, you can attach the light to the creature, causing it to float near that creature as it moves. You can {@action Sustain|PC1} the spell to move the light up to 60 feet; you can attach or detach it from a creature as part of this movement.",
+			"You can {@action Dismiss|PC1|Dismiss the spell}. If you Cast the Spell while you already have four light spells active, you must choose one of the existing spells to end."
+		],
+		"heightened": {
+			"X": {
+				"4": [
+					"The orb sheds {@quickref bright light||3|bright light} in a 60-foot radius (and {@quickref dim light||3|dim light} for the next 60 feet)."
+				]
+			}
+		}
+	},
+	{
+		"name": "Daze",
+		"source": "PC1",
+		"remaster": true,
+		"page": 322,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"manipulate",
+			"mental",
+			"nonlethal"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 60,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"savingThrow": {
+			"type": [
+				"W"
+			]
+		},
+		"duration": {
+			"number": 1,
+			"unit": "round"
+		},
+		"entries": [
+			"You push into the target's mind and daze it with a mental jolt. The jolt deals {@damage 1d6} mental damage, with a basic Will save. If the target critically fails the save, it is also {@condition stunned 1|PC1}."
+		],
+		"heightened": {
+			"plusX": {
+				"2": [
+					"The damage increases by {@scaledamage 1d6|1-10|1d6}."
+				]
+			}
+		}
+	},
+	{
+		"name": "Detect Magic",
+		"source": "PC1",
+		"remaster": true,
+		"page": 323,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"detection",
+			"manipulation"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"area": {
+			"types": [
+				"Emanation"
+			],
+			"entry": "30-foot emanation"
+		},
+		"entries": [
+			"You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies.",
+			"You detect illusion magic only if that magic's effect has a lower rank than the rank of your {@spell detect magic|PC1} spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an invisibility potion) typically are detected normally."
+		],
+		"heightened": {
+			"X": {
+				"3": [
+					"You learn the rank or level of the most powerful magical effect the spell detects, as determined by the GM."
+				],
+				"4": [
+					"As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don't learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that)."
+				]
+			}
+		}
+	},
+	{
+		"name": "Electric Arc",
+		"source": "PC1",
+		"remaster": true,
+		"page": 328,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"electricity",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 or 2 creatures",
+		"savingThrow": {
+			"type": [
+				"R"
+			],
+			"basic": true
+		},
+		"entries": [
+			"An arc of lightning leaps from one target to another. Each target takes {@damage 2d4} electricity damage with a basic Reflex save."
+		],
+		"heightened": {
+			"plusX": {
+				"1": [
+					"The damage increases by {@scaledamage 2d4|1-10|1d4}."
+				]
+			}
+		}
+	},
+	{
+		"name": "Telekinetic Hand",
+		"source": "PC1",
+		"remaster": true,
+		"page": 362,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"occult"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 unattended object of light Bulk or less",
+		"duration": {
+			"unit": "unlimited",
+			"sustained": true
+		},
+		"entries": [
+			"You create a floating, magical hand, either {@condition invisible|PC1} or ghostlike, that grasps the target object and levitates it slowly up to 20 feet in any direction. When you {@action Sustain|PC1} the Spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls."
+		],
+		"heightened": {
+			"X": {
+				"3": [
+					"You can target an unattended object with a Bulk of 1 or less."
+				],
+				"5": [
+					"The range increases to 60 feet, and you can target an unattended object with a Bulk of 1 or less."
+				],
+				"7": [
+					"The range increases to 60 feet, and you can target an unattended object with a Bulk of 2 or less."
+				]
+			}
+		}
+	},
+	{
+		"name": "Prestidigitation",
+		"source": "PC1",
+		"remaster": true,
+		"page": 351,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 10,
+			"unit": "feet"
+		},
+		"targets": "1 object (cook, lift, or tidy only)",
+		"duration": {
+			"unit": "unlimited",
+			"sustained": true
+		},
+		"entries": [
+			"The simplest magic does your bidding. You can perform simple {@trait magical} effects for as long as you {@action Sustain|PC1} the Spell. Each time you {@action Sustain|PC1} the Spell, you can choose one of four options.",
+			{
+				"type": "list",
+				"items": [
+					"{@bold Cook} Cool, warm, or flavor 1 pound of nonliving material.",
+					"{@bold Lift} Slowly lift an unattended object of light Bulk or less 1 foot off the ground.",
+					"{@bold Make} Create a temporary object of negligible Bulk, made of congealed magical substance. The object looks crude and artificial and is extremely fragile—it can't be used as a tool, weapon, or spell component.",
+					"{@bold Tidy} Color, clean, or soil an object of light Bulk or less"
+				]
+			},
+			"You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object a 1 minute per Bulk.",
+			"Prestidigitation can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you {@action Sustain|PC1} the Spell."
+		]
+	},
+	{
+		"name": "Read Aura",
+		"source": "PC1",
+		"remaster": true,
+		"page": 352,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"detection",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 1,
+			"unit": "minute"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 object",
+		"entries": [
+			"You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is {@trait magical}. You or anyone you advise about the aura gains a +2 circumstance bonus to {@action Identify Magic|PC1} on the item. If the object is illusory, you detect this only if the effect's rank is lower than the rank of your read aura spell."
+		],
+		"heightened": {
+			"X": {
+				"3": [
+					"You can target up to 10 objects."
+				],
+				"6": [
+					"You can target any number of objects."
+				]
+			}
+		}
+	},
+	{
+		"name": "Shield",
+		"source": "PC1",
+		"remaster": true,
+		"page": 356,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"force"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 1,
+			"unit": "action"
+		},
+		"duration": {
+			"entry": "until the start of your next turn",
+			"number": 1,
+			"unit": "round"
+		},
+		"entries": [
+			"You raise a magical shield of force. This counts as using the {@action Raise a Shield|PC1} action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.",
+			"While the spell is in effect, you can use the {@feat Shield Block|PC1} reaction with your magic shield. The shield has Hardness 5. You can use the spell's reaction to reduce damage from any spell or magical effect, even if it doesn't deal physical damage. After you use {@feat Shield Block|PC1}, the spell ends and you can't cast it again for 10 minutes."
+		],
+		"heightened": {
+			"plusX": {
+				"2": [
+					"The shield Hardness increases by {@scaledamage 5|3,5,7,9|5}."
+				]
+			}
+		}
+	},
+	{
+		"name": "Figment",
+		"source": "PC1",
+		"remaster": true,
+		"page": 331,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"illusion",
+			"manipulate",
+			"subtle"
+		],
+		"traditions": [
+			"arcane",
+			"occult"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"duration": {
+			"unit": "unlimited",
+			"sustained": true
+		},
+		"entries": [
+			"You create a simple illusory sound or vision. A sound adds the {@trait auditory} trait to the spell and the sound can't include intelligible words or elaborate music. A vision adds the {@trait visual} trait, can be no larger than a 5-foot cube, and is clearly crude and undetailed if viewed from within 15 feet. When you Cast or {@action Sustain|PC1} the Spell, you can attempt to {@action Create a Diversion|PC1} with the illusion, gaining a +2 circumstance bonus to your {@skill Deception|PC1} check. If the attempt fails against a creature, that creature disbelieves the figment."
+		],
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Alarm",
+		"source": "PC1",
+		"remaster": true,
+		"page": 314,
+		"level": 1,
+		"traits": [
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"cast": {
+			"number": 10,
+			"unit": "minute"
+		},
+		"range": {
+			"number": 1,
+			"unit": "touch"
+		},
+		"area": {
+			"types": [
+				"Burst"
+			],
+			"entry": "20-foot burst"
+		},
+		"duration": {
+			"number": 8,
+			"unit": "hour"
+		},
+		"entries": [
+			"You ward an area to alert you when creatures enter without your permission. When you cast {@spell alarm|PC1}, select a password. Whenever a Small or larger corporeal creature enters the spell's area without speaking the password, alarm sends your choice of a mental alert (in which case the spell gains the {@trait mental} trait) or an audible alarm with the sound and volume of a hand bell (in which case the spell gains the {@trait auditory} trait). Either option automatically awakens you, and the bell allows each creature in the area to attempt a DC 15 {@skill Perception|PC1} check to wake up. A creature aware of the alarm must succeed at a {@skill Stealth|PC1} check against the spell's DC or trigger the spell when moving into the area."
+		],
+		"heightened": {
+			"X": {
+				"3": [
+					"You can specify criteria for which creatures sound the {@spell alarm|PC1} spell—for instance, orcs or masked people."
+				]
+			}
+		}
+	},
+	{
+		"name": "Charm",
+		"source": "PC1",
+		"remaster": true,
+		"page": 320,
+		"level": 1,
+		"traits": [
+			"concentrate",
+			"emotion",
+			"incapacitation",
+			"manipulate",
+			"mental"
+		],
+		"traditions": [
+			"arcane",
+			"occult",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"savingThrow": {
+			"type": [
+				"W"
+			]
+		},
+		"duration": {
+			"dismiss": true,
+			"number": 1,
+			"unit": "hour"
+		},
+		"entries": [
+			"To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you or your allies recently threatened it or used {@condition hostile|PC1} actions against it.",
+			"You can {@action Dismiss|PC1} the spell. If you use {@condition hostile|PC1} actions against the target, the spell ends. When the spell ends, the target doesn't necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, meaning you could potentially convince the target to continue being your friend via mundane means.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": "The target is unaffected and aware you tried to charm it.",
+					"Success": "The target is unaffected but thinks your spell was something harmless instead of charm, unless it identifies the spell (see Identifying Spells on page 305).",
+					"Failure": "The target's attitude becomes {@condition friendly|PC1} toward you. If it was {@condition friendly|PC1}, it becomes {@condition helpful|PC1}. It can't use {@condition hostile|PC1} actions against you.",
+					"Critical Failure": "The target's attitude becomes {@condition helpful|PC1} toward you, and it can't use {@condition hostile|PC1} actions against you."
+				}
+			}
+		],
+		"heightened": {
+			"X": {
+				"4": [
+					"The duration lasts until your next daily preparations."
+				],
+				"8": [
+					"The duration lasts until your next daily preparations, and you can target up to 10 creatures."
+				]
+			}
+		}
+	},
+	{
+		"name": "Dizzying Colors",
+		"source": "PC1",
+		"remaster": true,
+		"page": 326,
+		"level": 1,
+		"traits": [
+			"concentrate",
+			"illusion",
+			"incapacitation",
+			"manipulate",
+			"visual"
+		],
+		"traditions": [
+			"arcane",
+			"occult"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"area": {
+			"types": [
+				"Cone"
+			],
+			"entry": "15-foot cone"
+		},
+		"savingThrow": {
+			"type": [
+				"W"
+			]
+		},
+		"duration": {
+			"entry": "1 or more rounds (see below)",
+			"number": 1,
+			"unit": "round"
+		},
+		"entries": [
+			"You unleash a swirling multitude of colors that overwhelms creatures based on their Will saves.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": "The creature is unaffected.",
+					"Success": "The creature is {@condition dazzled|PC1} for 1 round.",
+					"Failure": "The creature is {@condition stunned 1|PC1}, {@condition blinded|PC1} for 1 round, and {@condition dazzled|PC1} for 1 minute.",
+					"Critical Failure": "The creature is {@condition stunned|PC1} for 1 round and {@condition blinded|PC1} for 1 minute."
+				}
+			}
+		]
+	},
+	{
+		"name": "Mystic Armor",
+		"source": "PC1",
+		"remaster": true,
+		"page": 346,
+		"level": 1,
+		"traits": [
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"duration": {
+			"entry": "until your next daily preparations",
+			"unit": "special"
+		},
+		"entries": [
+			"You ward yourself with shimmering magical energy, gaining a +1 item bonus to AC and a maximum Dexterity modifier of +5. While wearing mystic armor, you use your unarmored proficiency to calculate your AC."
+		],
+		"heightened": {
+			"X": {
+				"4": [
+					"You gain a +1 item bonus to saving throws."
+				],
+				"6": [
+					"The item bonus to AC increases to +2, and you gain a +1 item bonus to saving throws."
+				],
+				"8": [
+					"The item bonus to AC increases to +2, and you gain a +2 item bonus to saving throws."
+				],
+				"10": [
+					"The item bonus to AC increases to +3, and you gain a +3 item bonus to saving throws."
+				]
+			}
+		}
+	},
+	{
+		"name": "Force Barrage",
+		"source": "PC1",
+		"remaster": true,
+		"page": 332,
+		"level": 1,
+		"traits": [
+			"concentrate",
+			"force",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"occult"
+		],
+		"cast": {
+			"number": 1,
+			"unit": "varies",
+			"entry": "{@as 1} to {@as 3}"
+		},
+		"range": {
+			"number": 120,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"entries": [
+			"You fire a shard of solidified magic toward a creature that you can see. It automatically hits and deals {@damage 1d4+1} force damage. For each additional action you use when Casting the Spell, increase the number of shards you shoot by one, to a maximum of three shards for 3 actions. You choose the target for each shard individually. If you shoot more than one shard at the same target, combine the damage before applying bonuses or penalties to damage, resistances, weaknesses, and so forth."
+		],
+		"heightened": {
+			"plusX": {
+				"2": [
+					"You fire one additional shard with each action you spend."
+				]
+			}
+		}
+	},
+	{
+		"name": "Sure Strike",
+		"source": "PC1",
+		"remaster": true,
+		"page": 361,
+		"level": 1,
+		"traits": [
+			"concentrate",
+			"fortune"
+		],
+		"traditions": [
+			"arcane",
+			"occult"
+		],
+		"cast": {
+			"number": 1,
+			"unit": "action"
+		},
+		"duration": {
+			"entry": "until the end of your turn",
+			"number": 1,
+			"unit": "turn"
+		},
+		"entries": [
+			"A glimpse into the future ensures your next blow strikes true. The next time you make an attack roll before the end of your turn, roll the attack twice and use the better result. The attack ignores circumstance penalties to the attack roll and any flat check required due to the target being {@condition concealed|PC1} or {@condition hidden|PC1}."
+		]
+	},
+	{
+		"name": "Phantasmal Minion",
+		"source": "PC1",
+		"remaster": true,
+		"page": 349,
+		"level": 1,
+		"traits": [
+			"concentrate",
+			"manipulate",
+			"summon"
+		],
+		"traditions": [
+			"arcane",
+			"occult"
+		],
+		"cast": {
+			"number": 3,
+			"unit": "action"
+		},
+		"range": {
+			"number": 60,
+			"unit": "feet"
+		},
+		"duration": {
+			"unit": "unlimited",
+			"sustained": true
+		},
+		"entries": [
+			"You summon a {@creature phantasmal minion|crb} (see below). The minion is roughly the shape of a humanoid. You can choose to have it be {@condition invisible|PC1} or have an ephemeral appearance, but it's obviously a {@trait magical} effect, not a real creature.",
+			{
+				"type": "pf2-sample-box",
+				"name": "",
+				"entries": [
+					{
+						"type": "data",
+						"tag": "creature"
+					}
+				]
+			}
+		],
+		"miscTags": [
+			"SM"
+		]
+	},
+	{
+		"name": "Translate",
+		"source": "PC1",
+		"remaster": true,
+		"page": 363,
+		"level": 2,
+		"traits": [
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"duration": {
+			"number": 1,
+			"unit": "hour"
+		},
+		"entries": [
+			"The target can understand the meaning of a single language it is hearing or reading when you cast the spell. This doesn't let it understand codes, language couched in metaphor, and the like (subject to GM discretion). If the target can hear multiple languages and knows that, it can choose which language to understand; otherwise, choose one of the languages randomly."
+		],
+		"heightened": {
+			"X": {
+				"3": [
+					"The target can also speak the language."
+				],
+				"4": [
+					"You can target up to 10 creatures, and targets can also speak the language."
+				]
+			}
+		}
+	},
+	{
+		"name": "Dispel Magic",
+		"source": "PC1",
+		"remaster": true,
+		"page": 325,
+		"level": 2,
+		"traits": [
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 120,
+			"unit": "feet"
+		},
+		"targets": "1 spell effect or unattended magic item",
+		"entries": [
+			"You unravel the magic behind a spell or effect. Attempt a {@quickref counteract||3|counteracting} check against the target. If you succeed against a spell effect, you counteract it. If you succeed against a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties. If the target is an {@trait artifact} or similar item, you automatically fail."
+		]
+	},
+	{
+		"name": "False Vitality",
+		"source": "PC1",
+		"remaster": true,
+		"page": 331,
+		"level": 2,
+		"traits": [
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"occult"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"duration": {
+			"number": 8,
+			"unit": "hour"
+		},
+		"entries": [
+			"You augment your flesh with the energies typically used to manipulate the undead. You gain 10 temporary Hit Points."
+		],
+		"heightened": {
+			"plusX": {
+				"1": [
+					"The temporary Hit Points increase by {@scaledamage 10|2-10|3}."
+				]
+			}
+		},
+		"miscTags": [
+			"THP"
+		]
+	},
+	{
+		"name": "Revealing Light",
+		"source": "PC1",
+		"remaster": true,
+		"page": 353,
+		"level": 2,
+		"traits": [
+			"concentrate",
+			"light",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 120,
+			"unit": "feet"
+		},
+		"area": {
+			"types": [
+				"Burst"
+			],
+			"entry": "10-foot burst"
+		},
+		"duration": {
+			"entry": "varies",
+			"unit": "special"
+		},
+		"entries": [
+			"A wave of magical light washes over the area. You choose the appearance of the light, such as colorful, heatless flames or sparkling motes. A creature affected by revealing light is {@condition dazzled|PC1}. If the creature was {@condition invisible|PC1}, it becomes {@condition concealed|PC1} instead. If the creature was already {@condition concealed|PC1} for any other reason, it is no longer concealed.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": "The target is unaffected.",
+					"Success": "The light affects the creature for 2 rounds.",
+					"Failure": "The light affects the creature for 1 minute.",
+					"Critical Failure": "The light affects the creature for 10 minutes."
+				}
+			}
+		]
+	},
+	{
+		"name": "Web",
+		"source": "PC2",
+		"remaster": true,
+		"page": 255,
+		"level": 2,
+		"traits": [
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 3,
+			"unit": "action"
+		},
+		"range": {
+			"unit": "feet",
+			"number": 30
+		},
+		"area": {
+			"entry": "10-foot burst",
+			"types": [
+				"Burst"
+			]
+		},
+		"duration": {
+			"number": 1,
+			"unit": "minute"
+		},
+		"entries": [
+			"You create a sticky web in the area that impedes creatures' movement. Squares filled with the web are difficult terrain. Each time a creature in the web begins to use a move action or enters the web during a move action it's using, it must attempt an {@skill Athletics|PC1} check or Reflex save against your spell DC to avoid taking a circumstance penalty to its Speeds or becoming {@condition immobilized|PC1}. A creature that gets out of the web ceases to take a circumstance penalty to its Speed from the web.",
+			"Each square can be cleared of the web by a single attack or effect that deals at least 5 slashing damage or 1 fire damage. A square has AC 5, and it automatically fails its saving throws.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": [
+						"The creature is unaffected, and it doesn't need to attempt further {@skill Athletics|PC1} checks or saving throws against the web this turn. If it used an {@skill Athletics|PC1} check, it clears the web from every square it leaves during its movement."
+					],
+					"Success": [
+						"The creature is unaffected during its action. If it used an {@skill Athletics|PC1} check, it clears the web from every square it leaves during its movement."
+					],
+					"Failure": [
+						"The creature takes a −10-foot circumstance penalty to its Speeds until the start of its next turn."
+					],
+					"Critical Failure": [
+						"The creature is {@condition immobilized|PC1} until the start of its next turn, after which it takes a −10-foot circumstance penalty to its Speeds for 1 round. It can attempt to {@action Escape|PC1} to remove its {@condition immobilized|PC1} condition."
+					]
+				}
+			}
+		],
+		"heightened": {
+			"X": {
+				"4": [
+					"The spell's area increases to a 20-foot burst, and its range increases to 60 feet."
+				]
+			}
+		}
+	},
+	{
+		"name": "Haste",
+		"source": "PC1",
+		"remaster": true,
+		"page": 335,
+		"level": 3,
+		"traits": [
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"occult",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"duration": {
+			"number": 1,
+			"unit": "minute"
+		},
+		"entries": [
+			"Magic empowers the target to act faster. It gains the {@condition quickened|PC1} condition and can use the extra action each round only for {@action Strike|PC1} and {@action Stride|PC1} actions."
+		],
+		"heightened": {
+			"X": {
+				"7": [
+					"You can target up to 6 creatures."
+				]
+			}
+		}
+	},
+	{
+		"name": "Lightning Bolt",
+		"source": "PC1",
+		"remaster": true,
+		"page": 341,
+		"level": 3,
+		"traits": [
+			"concentrate",
+			"electricity",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"area": {
+			"types": [
+				"Line"
+			],
+			"entry": "120-foot line"
+		},
+		"savingThrow": {
+			"type": [
+				"R"
+			],
+			"basic": true
+		},
+		"entries": [
+			"A bolt of lightning strikes outward from your hand, dealing {@damage 4d12} electricity damage."
+		],
+		"heightened": {
+			"plusX": {
+				"1": [
+					"The damage increases by {@scaledamage 4d12|3-10|1d12}."
+				]
+			}
+		}
+	},
+	{
+		"name": "Locate",
+		"source": "PC1",
+		"remaster": true,
+		"page": 341,
+		"level": 3,
+		"traits": [
+			"uncommon",
+			"concentrate",
+			"detection",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult"
+		],
+		"cast": {
+			"number": 10,
+			"unit": "minute"
+		},
+		"range": {
+			"number": 500,
+			"unit": "feet"
+		},
+		"targets": "1 specific object or type of object",
+		"duration": {
+			"unit": "unlimited",
+			"sustained": true
+		},
+		"entries": [
+			"You learn the direction to the target (if you picked a specific object, such as \"my mother's sword\") or the nearest target (if you picked a type of object, such as \"swords\"). If the target is a specific object, you must have {@condition observed|PC1} it directly with your own senses. If it's a type of object, you still need to have an accurate mental image of the type of object. If there's lead or running water between you and the target, this spell can't locate the object. This means you might find a type of object farther away if the nearest one is behind lead or running water."
+		],
+		"heightened": {
+			"X": {
+				"5": [
+					"You can target a specific creature or ancestry instead of an object, but you must have met or seen up close the creature or ancestry you want to target."
+				]
+			}
+		}
+	},
+	{
+		"name": "Paralyze",
+		"source": "PC1",
+		"remaster": true,
+		"page": 348,
+		"level": 3,
+		"traits": [
+			"concentrate",
+			"incapacitation",
+			"manipulate",
+			"mental"
+		],
+		"traditions": [
+			"arcane",
+			"occult"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"savingThrow": {
+			"type": [
+				"W"
+			]
+		},
+		"duration": {
+			"entry": "varies",
+			"unit": "special"
+		},
+		"entries": [
+			"You block the target's motor impulses before they can leave its mind, freezing the target in place. The target must attempt a Will save.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": "The target is unaffected.",
+					"Success": "The target is {@condition stunned 1|PC1}.",
+					"Failure": "The target is {@condition paralyzed|PC1} for 1 round.",
+					"Critical Failure": "The target is {@condition paralyzed|PC1} for 4 rounds. At the end of each of its turns, it can attempt a new Will save to reduce the remaining duration by 1 round, or end it entirely on a critical success."
+				}
+			}
+		],
+		"heightened": {
+			"X": {
+				"7": [
+					"You can target up to 10 creatures."
+				]
+			}
+		}
+	},
+	{
+		"name": "Slow",
+		"source": "PC1",
+		"remaster": true,
+		"page": 357,
+		"level": 3,
+		"traits": [
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"occult",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"savingThrow": {
+			"type": [
+				"F"
+			]
+		},
+		"duration": {
+			"entry": "varies",
+			"number": 1,
+			"unit": "minute"
+		},
+		"entries": [
+			"You dilate the flow of time around the target, slowing its actions.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": "The target is unaffected.",
+					"Success": "The target is {@condition slowed 1|PC1} for 1 round.",
+					"Failure": "The target is {@condition slowed 1|PC1} for 1 minute.",
+					"Critical Failure": "The target is {@condition slowed 2|PC1} for 1 minute."
+				}
+			}
+		],
+		"heightened": {
+			"X": {
+				"6": [
+					"You can target up to 10 creatures."
+				]
+			}
+		}
+	}
+]

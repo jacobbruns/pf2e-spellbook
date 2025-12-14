@@ -1,0 +1,600 @@
+[
+	{
+		"name": "Eat Fire",
+		"source": "RoE",
+		"remaster": true,
+		"page": 119,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"fire",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"occult",
+			"primal"
+		],
+		"cast": {
+			"number": 1,
+			"unit": "reaction"
+		},
+		"components": [
+			[
+				"S",
+				"V"
+			]
+		],
+		"trigger": "You would take fire damage",
+		"duration": {
+			"unit": "turn",
+			"entry": "until the end of your next turn"
+		},
+		"entries": [
+			"You consume and ingest fire, making it less harmful to you. You gain resistance 5 to fire damage until the end of the current turn. During the remaining duration of the spell, you can use the Belch Smoke action. The spell ends if you fall {@condition unconscious}, inhale, or exhale (this includes speaking).",
+			"{@b Belch Smoke} {@as 1} You exhale what remains of the smoke, ending the spell and creating a smoke cloud in a 5-foot burst within 20 feet. All creatures within the smoke cloud are {@condition concealed}, and all other creatures are {@condition concealed} to them. The smoke lasts for 1 minute or until dispersed by a strong wind."
+		],
+		"heightened": {
+			"plusX": {
+				"3": [
+					"The resistance increases by 5."
+				]
+			}
+		},
+		"activity": {
+			"number": 1,
+			"unit": "reaction"
+		}
+	},
+	{
+		"name": "Gouging Claw",
+		"source": "PC1",
+		"remaster": true,
+		"page": 333,
+		"level": 1,
+		"traits": [
+			"attack",
+			"cantrip",
+			"concentrate",
+			"manipulate",
+			"morph"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 1,
+			"unit": "touch"
+		},
+		"savingThrow": {
+			"type": [
+				"AC"
+			]
+		},
+		"targets": "1 creature",
+		"entries": [
+			"You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target's AC. If you hit, you deal your choice of {@damage 2d6} slashing damage or {@damage 2d6} piercing damage, plus 2 {@condition persistent damage|PC1|persistent bleed} damage. On a critical success, you deal double damage and double bleed damage."
+		],
+		"heightened": {
+			"plusX": {
+				"1": [
+					"The damage increases by {@scaledamage 2d6|1-10|1d6} and the {@condition persistent damage|PC1|persistent bleed damage} increases by 1."
+				]
+			}
+		},
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Puff of Poison",
+		"source": "PC2",
+		"remaster": true,
+		"page": 249,
+		"type": "Cantrip",
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"manipulate",
+			"poison"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"unit": "feet",
+			"number": 10
+		},
+		"targets": "1 creature",
+		"savingThrow": {
+			"type": [
+				"F"
+			]
+		},
+		"entries": [
+			"You exhale a shimmering cloud of toxic breath at an enemy's face. The target takes {@damage 1d4} poison damage and {@damage 1d4} {@condition persistent damage|PC1|persistent poison damage}, depending on its Fortitude save.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": [
+						"The creature is unaffected."
+					],
+					"Success": [
+						"The target takes half initial damage and no {@condition persistent damage|PC1}."
+					],
+					"Failure": [
+						"The target takes full initial and {@condition persistent damage|PC1}."
+					],
+					"Critical Failure": [
+						"The target takes double initial and {@condition persistent damage|PC1}."
+					]
+				}
+			}
+		],
+		"heightened": {
+			"plusX": {
+				"2": [
+					"The initial poison damage increases by {@damage 1d4}, and the {@condition persistent damage|PC1|persistent poison damage} increases by {@damage 1d4}."
+				]
+			}
+		},
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Scatter Scree",
+		"source": "PC2",
+		"remaster": true,
+		"page": 250,
+		"type": "Cantrip",
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"earth",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"unit": "feet",
+			"number": 30
+		},
+		"area": {
+			"entry": "two contiguous 5-foot cubes",
+			"types": [
+				"Misc."
+			]
+		},
+		"savingThrow": {
+			"type": [
+				"R"
+			],
+			"basic": true
+		},
+		"duration": {
+			"number": 1,
+			"unit": "minute"
+		},
+		"entries": [
+			"A jumble of rocks cascades into the area. The scattering rocks deal {@damage 2d4} bludgeoning damage (basic Reflex save). The ground in the area becomes difficult terrain for the duration of the spell. A creature can {@action Interact|PC1} to clear a square of this scree.",
+			"If you cast this spell again, any previous scatter scree you've cast ends."
+		],
+		"heightened": {
+			"plusX": {
+				"1": [
+					"The damage increases by {@damage 1d4}."
+				]
+			}
+		},
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Warp Step",
+		"source": "DA",
+		"page": 107,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"conjuration"
+		],
+		"traditions": [
+			"arcane",
+			"occult"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"components": [
+			[
+				"S",
+				"V"
+			]
+		],
+		"entries": [
+			"When you walk, the earth warps beneath your feet—your steps extend, distance contracts, and everything is just a little bit closer. You gain a +5-foot status bonus to your Speed until the end of your turn. You then {@action Stride} twice. You can use warp step to {@action Burrow}, {@action Climb}, {@action Fly}, or {@action Swim} instead of {@action Stride} if you have the corresponding movement type."
+		]
+	},
+	{
+		"name": "Message",
+		"source": "PC1",
+		"remaster": true,
+		"page": 343,
+		"level": 1,
+		"traits": [
+			"auditory",
+			"cantrip",
+			"concentrate",
+			"illusion",
+			"linguistic",
+			"mental",
+			"subtle"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 1,
+			"unit": "action"
+		},
+		"range": {
+			"number": 120,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"duration": {
+			"entry": "see below",
+			"unit": "special"
+		},
+		"entries": [
+			"You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. While others can't hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you. The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly to your ear, just like the original message."
+		],
+		"heightened": {
+			"X": {
+				"3": [
+					"The spell's range increases to 500 feet."
+				]
+			}
+		},
+		"activity": {
+			"number": 1,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Read Aura",
+		"source": "PC1",
+		"remaster": true,
+		"page": 352,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"detection",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 1,
+			"unit": "minute"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 object",
+		"entries": [
+			"You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is {@trait magical}. You or anyone you advise about the aura gains a +2 circumstance bonus to {@action Identify Magic|PC1} on the item. If the object is illusory, you detect this only if the effect's rank is lower than the rank of your read aura spell."
+		],
+		"heightened": {
+			"X": {
+				"3": [
+					"You can target up to 10 objects."
+				],
+				"6": [
+					"You can target any number of objects."
+				]
+			}
+		},
+		"activity": {
+			"number": 1,
+			"unit": "minute"
+		}
+	},
+	{
+		"name": "Sigil",
+		"source": "PC1",
+		"remaster": true,
+		"page": 357,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"divine",
+			"occult",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 1,
+			"unit": "touch"
+		},
+		"targets": "1 creature or object",
+		"duration": {
+			"entry": "unlimited (see below)",
+			"unit": "unlimited"
+		},
+		"entries": [
+			"You harmlessly place your unique magical sigil, which is about 1 square inch in size, on the targeted creature or object. The mark can be visible or {@condition invisible|PC1}, and you can change it from one state to another by using an {@action Interact|PC1} action to touch the target. The mark can be scrubbed or scraped off with 5 minutes of work. If it's on a creature, it fades naturally over the course of a week. The time before the mark fades increases depending on your heightened level."
+		],
+		"heightened": {
+			"X": {
+				"3": [
+					"The sigil instead fades after 1 month."
+				],
+				"5": [
+					"The sigil instead fades after 1 year."
+				],
+				"7": [
+					"The sigil never fades."
+				]
+			}
+		},
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Take Root",
+		"source": "RoE",
+		"remaster": true,
+		"page": 198,
+		"level": 1,
+		"traits": [
+			"cantrip",
+			"manipulate",
+			"plant",
+			"wood"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 1,
+			"unit": "action"
+		},
+		"components": [
+			[
+				"S",
+				"V"
+			]
+		],
+		"range": {
+			"unit": "feet",
+			"number": 30
+		},
+		"targets": "1 willing creature",
+		"duration": {
+			"number": 1,
+			"unit": "round"
+		},
+		"entries": [
+			"Roots sprout from the flesh of the target and coil across the floor or around objects, reinforcing their stance or grip. The targeted creature gains a +1 circumstance bonus to their Fortitude DC against attempts to {@action Shove} them and a +1 circumstance bonus to their Reflex DC against attempts to {@action Disarm} or {@action Trip} them. This bonus also applies to saving throws against spells or effects that would attempt to remove a held item from their grasp."
+		],
+		"activity": {
+			"number": 1,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Tangle Vine",
+		"source": "PC1",
+		"remaster": true,
+		"page": 362,
+		"level": 1,
+		"traits": [
+			"attack",
+			"cantrip",
+			"concentrate",
+			"manipulate",
+			"plant",
+			"wood"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"savingThrow": {
+			"type": [
+				"AC"
+			]
+		},
+		"targets": "1 creature",
+		"entries": [
+			"A vine appears from thin air, flicking from your hand and lashing itself to the target. Attempt a spell attack roll against the target.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": "The target gains the {@condition immobilized|PC1} condition and takes a –10-foot circumstance penalty to its Speeds for 1 round. It can attempt to {@action Escape|PC1} against your spell DC to remove the penalty and the {@condition immobilized|PC1} condition.",
+					"Success": "The target takes a –10-foot circumstance penalty to its Speeds for 1 round. It can attempt to {@action Escape|PC1} against your spell DC to remove the penalty.",
+					"Failure": "The target is unaffected."
+				}
+			}
+		],
+		"heightened": {
+			"X": {
+				"2": [
+					"The effects last for 2 rounds."
+				],
+				"4": [
+					"The effects last for 1 minute."
+				]
+			}
+		},
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	},
+	{
+		"name": "Ray of Frost",
+		"source": "CRB",
+		"page": 362,
+		"level": 1,
+		"traits": [
+			"attack",
+			"cantrip",
+			"cold",
+			"evocation"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"components": [
+			[
+				"S",
+				"V"
+			]
+		],
+		"range": {
+			"number": 120,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"entries": [
+			"You blast an icy ray. Make a spell attack roll. The ray deals cold damage equal to {@dice 1d4} + your spellcasting ability modifier.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": "The target takes double damage and takes a –10-foot status penalty to its Speeds for 1 round.",
+					"Success": "The target takes normal damage."
+				}
+			}
+		],
+		"heightened": {
+			"plusX": {
+				"1": [
+					"The damage increases by {@damage 1d4}."
+				]
+			}
+		}
+	},
+	{
+		"name": "Ignition",
+		"source": "PC1",
+		"remaster": true,
+		"page": 336,
+		"level": 1,
+		"traits": [
+			"attack",
+			"cantrip",
+			"concentrate",
+			"fire",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"spellLists": [
+			"Elemental"
+		],
+		"savingThrow": {
+			"type": [
+				"AC"
+			]
+		},
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"range": {
+			"number": 30,
+			"unit": "feet"
+		},
+		"targets": "1 creature",
+		"entries": [
+			"You snap your fingers and point at a target, which begins to smolder. Make a spell attack roll against the target's AC, dealing {@damage 2d4} ({@damage 2d6} if melee) fire damage on a hit. If the target is within your melee reach, you can choose to make a melee spell attack with the flame instead of a ranged spell attack, which increases all the spell's damage dice to d6s.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": "The target takes double damage and {@damage 1d4} ({@damage 1d6} if melee) persistent fire damage.",
+					"Success": "The target takes full damage."
+				}
+			}
+		],
+		"heightened": {
+			"plusX": {
+				"1": [
+					"Increase the damage by {@scaledamage 2d4|1-10|1d4} ({@scaledamage 2d6|1-10|1d6} if melee) and the {@condition persistent damage|PC1} on a critical hit by {@scaledamage 2d4|1-10|1d4} ({@scaledamage 2d6|1-10|1d6} if melee)."
+				]
+			}
+		},
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	}
+]
