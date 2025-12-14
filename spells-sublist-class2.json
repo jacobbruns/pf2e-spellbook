@@ -1,0 +1,62 @@
+[
+	{
+		"name": "Slashing Gust",
+		"source": "RoE",
+		"remaster": true,
+		"page": 71,
+		"level": 1,
+		"traits": [
+			"air",
+			"attack",
+			"cantrip",
+			"concentrate",
+			"manipulate"
+		],
+		"traditions": [
+			"arcane",
+			"primal"
+		],
+		"cast": {
+			"number": 2,
+			"unit": "action"
+		},
+		"components": [
+			[
+				"S",
+				"V"
+			]
+		],
+		"requirements": "You have at least one free hand.",
+		"range": {
+			"unit": "feet",
+			"number": 60
+		},
+		"targets": "1 or 2 creatures",
+		"entries": [
+			"You slash your hand through the air, channeling miniature ripples of air from each finger to slice your enemy. If you have two hands free, you can target two creatures with this spell; otherwise, you target one.",
+			"Make a spell attack roll against each target's AC. This deals {@damage 2d4} slashing damage. On a critical success, a target also takes {@damage 1d4} {@condition persistent damage||persistent bleed damage}. If you're attacking two creatures, this counts as two attacks for your multiple attack penalty, but the penalty doesn't increase until after both attacks.",
+			{
+				"type": "successDegree",
+				"entries": {
+					"Critical Success": [
+						"The target takes double damage and {@damage 1d4} {@condition persistent damage||persistent bleed damage}."
+					],
+					"Success": [
+						"The target takes full damage."
+					]
+				}
+			}
+		],
+		"heightened": {
+			"plusX": {
+				"1": [
+					"The damage increases by {@damage 1d4}, and the {@condition persistent damage} on a critical hit increases by {@dice 1d4}."
+				]
+			}
+		},
+		"activity": {
+			"number": 2,
+			"unit": "action"
+		}
+	}
+]
